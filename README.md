@@ -9,12 +9,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
 # your email details
 
 SERVER = 'smtp.gmail.com'  # your smtp server
 PORT  = 587    # your port number
-FROM  =  'ratheeadvik0412@gmail.com'    # your from email id
-PASS  = 'abcdefg' # your email id password
+FROM  =  'tonychelseafan@gmail.com'    # your from email id
+PASS  = 'hsghdhhd89nssbs' # your email id password
 
 # Authentication part
 server = smtplib.SMTP(SERVER,PORT)
@@ -25,6 +26,8 @@ server.starttls() # start TLS connection which is secure connection
 
 server.login(FROM,PASS)
 
+
+  
 # reading the spreadsheet
 email_list = pd.read_excel('data/data.xlsx')
 
@@ -63,4 +66,3 @@ print('Email Sent .....')
 
 # close the smtp server
 server.close()
-
