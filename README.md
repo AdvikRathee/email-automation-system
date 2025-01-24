@@ -1,4 +1,3 @@
-# email-automation-system
 '''
     Python code to send email to a list of emails from a spreadsheet
 '''
@@ -9,7 +8,6 @@ from email import message
 import smtplib 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
 
 # your email details
 
@@ -27,8 +25,6 @@ server.starttls() # start TLS connection which is secure connection
 
 server.login(FROM,PASS)
 
-
-  
 # reading the spreadsheet
 email_list = pd.read_excel('data/data.xlsx')
 
@@ -67,3 +63,4 @@ print('Email Sent .....')
 
 # close the smtp server
 server.close()
+
